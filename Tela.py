@@ -78,4 +78,17 @@ class CRUDapp:
         else:
             messagebox.showerror("Error", "Todos os campos são obrigatórios")
 
+    def delete_user(self):
+        user_id = self.user_id_entry.get()
+        if user_id:
+            delete_user(user_id)
+            self.user_id_entry.delete(0,tk.END)
+            messagebox.showerror("Sucesso","Usuario excluido com sucesso!")
 
+        else:
+            messagebox.showerror("Error","ID do usuario é obrigatorio")
+
+if __name__ =="__main__":
+    root = tk.Tk()
+    app = CRUDapp(root)
+    root.mainloop()
