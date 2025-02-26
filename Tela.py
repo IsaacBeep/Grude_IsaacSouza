@@ -30,10 +30,10 @@ class CRUDapp:
         self.user_id_entry = tk.Entry(self.root).grid(row = 5, column = 1)
 
         #Botões do crud
-        tk.Button(self.root, text= "Criar Usuario", command= self.create_widgets).grid(row = 6, column = 0, columnspan = 1)
-        tk.Button(self.root, text= "Listar Usuario", command= self.create_widgets).grid(row = 6, column = 1, columnspan = 1)
-        tk.Button(self.root, text= "Alterar Usuario", command= self.create_widgets).grid(row = 7, column = 0, columnspan = 1)
-        tk.Button(self.root, text= "Excluir Usuario", command= self.create_widgets).grid(row = 7, column = 1, columnspan = 1)
+        tk.Button(self.root, text= "Criar Usuario", command= self.create_user).grid(row = 6, column = 0, columnspan = 1)
+        tk.Button(self.root, text= "Listar Usuario", command= self.create_user).grid(row = 6, column = 1, columnspan = 1)
+        tk.Button(self.root, text= "Alterar Usuario", command= self.create_user).grid(row = 7, column = 0, columnspan = 1)
+        tk.Button(self.root, text= "Excluir Usuario", command= self.create_user).grid(row = 7, column = 1, columnspan = 1)
         
     def create_user(self):
         nome = self.nome_entry.get()
