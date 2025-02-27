@@ -21,19 +21,29 @@ class CRUDapp:
         tk.Label(self.root, text = "User Id(for update/delete):").grid(row = 5, column = 0)
 
         #Criar as caixas para digitar os valores 
-        self.nome_entry = tk.Entry(self.root).grid(row = 0, column = 1)
-        self.telefone_entry = tk.Entry(self.root).grid(row = 1, column = 1)
-        self.email_entry = tk.Entry(self.root).grid(row = 2, column = 1)
-        self.usuario_entry = tk.Entry(self.root).grid(row = 3, column = 1)
-        self.senha_entry = tk.Entry(self.root).grid(row = 4, column = 1)
+        self.nome_entry = tk.Entry(self.root)
+        self.telefone_entry = tk.Entry(self.root)
+        self.email_entry = tk.Entry(self.root)
+        self.usuario_entry = tk.Entry(self.root)
+        self.senha_entry = tk.Entry(self.root)
 
-        self.user_id_entry = tk.Entry(self.root).grid(row = 5, column = 1)
+        self.user_id_entry = tk.Entry(self.root)
 
         #Botões do crud
-        tk.Button(self.root, text= "Criar Usuario", command= self.create_user).grid(row = 6, column = 0, columnspan = 1)
-        tk.Button(self.root, text= "Listar Usuario", command= self.create_user).grid(row = 6, column = 1, columnspan = 1)
-        tk.Button(self.root, text= "Alterar Usuario", command= self.create_user).grid(row = 7, column = 0, columnspan = 1)
-        tk.Button(self.root, text= "Excluir Usuario", command= self.create_user).grid(row = 7, column = 1, columnspan = 1)
+        tk.Button(self.root, text = "Criar usuário", command = self.create_user).grid(row = 6, column = 0, columnspan = 1)
+        tk.Button(self.root, text = "Listar usuário", command = self.read_users).grid(row = 6, column = 1, columnspan = 1)
+        tk.Button(self.root, text = "Alterar usuário", command = self.update_user).grid(row = 7, column = 0, columnspan = 1)
+        tk.Button(self.root, text = "Excluir usuário", command = self.delete_user).grid(row = 7, column = 1, columnspan = 1)
+
+
+        self.nome_entry.grid(row = 0, column = 1)
+        self.telefone_entry.grid(row = 1, column = 1)
+        self.email_entry.grid(row = 2, column = 1)
+        self.usuario_entry.grid(row = 3, column = 1)
+        self.senha_entry.grid(row = 4, column = 1)
+
+        self.user_id_entry.grid(row = 5, column = 1)
+
         
     def create_user(self):
         nome = self.nome_entry.get()
@@ -88,7 +98,7 @@ class CRUDapp:
         else:
             messagebox.showerror("Error","ID do usuario é obrigatorio")
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     root = tk.Tk()
     app = CRUDapp(root)
     root.mainloop()
