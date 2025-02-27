@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from crud import create_user, read_users, update_user, delete_user
+from GRUD.crud import create_user, read_users, update_user, delete_user
 
 class CRUDapp:
     def __init__(self, root):

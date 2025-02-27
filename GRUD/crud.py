@@ -1,5 +1,5 @@
 import mysql.connector
-from Config import MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE
+from GRUD.Config import MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE
 
 def get_connection():
     return mysql.connector.connect(
