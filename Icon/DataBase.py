@@ -7,7 +7,7 @@ class DataBase:
             HOST = "localhost",
             USER = "root",
             PASSWORD = "",
-            DATABASE = "IsaacSouza_db",
+            DATABASE = "isaacsouza_db"
         )
 
         self.cursor = self.conn.cursor() #Cria um cursor para executar o comando SQL
