@@ -41,7 +41,6 @@ class CRUDapp:
         self.email_entry.grid(row = 2, column = 1)
         self.usuario_entry.grid(row = 3, column = 1)
         self.senha_entry.grid(row = 4, column = 1)
-
         self.user_id_entry.grid(row = 5, column = 1)
 
         
