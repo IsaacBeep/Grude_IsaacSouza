@@ -13,13 +13,13 @@ jan.configure(background = "white") #Configura a cor de fundo da janela
 jan.resizable(width = False, height = False) #Impede que a janela seja redimensionada
 
 #Comando para deixar a tela transparente
-jan.attributes("-alpha", 0.9) #Define a transparencia da janla (0.0 a 1.0)
+#jan.attributes("-alpha", 0.9) #Define a transparencia da janla (0.0 a 1.0)
 
 #Define icone na janela
-jan.iconbitmap(default = "C:/Users/isaac_s_souza/Downloads/IS.png") #Define o icone da janela
+#jan.iconbitmap(default = "C:/Users/isaac_s_souza/Downloads/IS.png") #Define o icone da janela
 
 #Carregar imagem
-logo = PhotoImage(file = "C:/Users/isaac_s_souza/Downloads/IS.png") #carrega imagem do logo
+#logo = PhotoImage(file = "C:/Users/isaac_s_souza/Downloads/IS.png") #carrega imagem do logo
 
 #Criar Frame 
 LeftFrame = Frame(jan, width = 200, height = 300, bg = "MIDNIGHTBLUE", relief = "raise") #Cria o frame à esquerda
@@ -29,7 +29,7 @@ RightFrame = Frame(jan, width = 395, height = 300, bg = "MIDNIGHTBLUE", relief =
 RightFrame.pack(side = RIGHT) #Posiciona o frame a direita
 
 #Adicionar Logo
-LogoLabel = Label(LeftFrame, image = logo, bg = "MIDNIGHTBLUE") #Cria um label para a imagem do logo
+LogoLabel = Label(LeftFrame, bg = "MIDNIGHTBLUE") #Cria um label para a imagem do logo
 LogoLabel.place(x = 50, y = 100) #Posiciona o label no frame esquerdo
 
 #Adicionar campos de usuario e senha
